@@ -1,10 +1,16 @@
 !!!IMPORTANT!!! Add applyBuff to the list of your macros:
 https://gitlab.com/JusticeNoon/foundry-macros/-/blob/master/PF1E%20Entity-Link/applyBuff.js
 
-1. Add custom buff Ablative Barrier
+1. Add custom buff Ablative Barrier, in Details scroll down to Advanced and set its Identifier to custom "ablativeBarrier"
+
 2. In "Changes" add +2 Armor AC
+
 3. In "Details" Give it an Action and set Duration to @item.level
+
 4. Give it Limited uses Charges, set Charge cost formula to 0 and Maximum Uses Formula to (@item.level*5)
+
 5. In "Advanced" add two scripts, useAblativeBarrier in "Use" and setAblativeBarrier in "Toggle"
+
 6. When player is taking damage, one must activate this buff and type the amount of damage taken. The code will do the rest. The buff will automatically deactivate once the charges are off.
+
 7. IMPORTANT! The player must first set the level of buff and ONLY then toggle it active.
