@@ -1,3 +1,6 @@
+!!!IMPORTANT!!! Add applyBuff to the list of your macros:
+https://gitlab.com/JusticeNoon/foundry-macros/-/blob/master/PF1E%20Entity-Link/applyBuff.js
+
 1. Add custom buff Ablative Barrier
 2. In "Changes" add +2 Armor AC
 3. In "Details" Give it an Action and set Duration to @item.level
