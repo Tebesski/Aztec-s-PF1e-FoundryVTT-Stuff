@@ -1,0 +1,4 @@
+If you want to make it work as intended, create Class Ability in character's Combat for every Judgment.
+In character sheet Combat there is Class Ability, press + and add one by one. In "Advanced" of every Judgment, add "Use" script corresponding to the list in this folder.
+
+Also, use Koboldworks Health over time for Healing buff.
