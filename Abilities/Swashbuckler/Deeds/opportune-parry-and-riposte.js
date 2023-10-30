@@ -9,5 +9,9 @@ if (ref > 0 && pan > 0) {
    panache.addCharges(-1)
    reflex.addCharges(-1)
 } else {
+   shared.reject = true
+   await Dialog.confirm({
+      content: "You don't have enough resources to use this ability!",
+   })
    return
 }
