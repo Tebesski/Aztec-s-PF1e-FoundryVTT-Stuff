@@ -1,3 +1,5 @@
+Whenever you take Energy damage, just Use the buff from your "Buff" tab.
+
 1. In "Details" -> "Charges", set Maximum Uses Formula as @item.level > 10 ? 30 : @item.level > 7 ? 20 : 10
 
 2. Set the level of the buff.
