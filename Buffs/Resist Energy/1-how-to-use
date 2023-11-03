@@ -1,0 +1,9 @@
+1. In "Details" -> "Charges", set Maximum Uses Formula as @item.level > 10 ? 30 : @item.level > 7 ? 20 : 10
+
+2. Set the level of the buff.
+
+3. In "Details", Create Action for this buff.
+
+4. Put resistEnergy.js code in "Advanced" -> "Use"
+
+5. Don't forget to check, if in "Details" in "Advanced" there is a "resistEnergy" identifier.
