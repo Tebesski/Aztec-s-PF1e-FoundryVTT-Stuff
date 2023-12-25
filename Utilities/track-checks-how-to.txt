@@ -1,5 +1,5 @@
-1. You need Small time and Monk's TokenBar
-2. Character must be of PC type and player must own it
-3. So, you launch this macro and then, every set time it triggers a window, that asks you if you want to make a set check for set saving throw (e.g. Fortitude with DC 15 that increments after every previous check); or if you want to stop making checks, or make one last check and then stop making checks.
+1. You need modules: Small Time, Monk's TokenBar and About Time
+2. The character must be of PC type and the player must own it
+3. So, you launch this macro, and then, every set time it triggers a window, that asks you if you want to make a set check for set saving throw (e.g. Fortitude with DC 15 that increments after every previous check); or if you want to stop making checks, or make one last check and then stop making checks.
 4. This macro here is set for Fort save against cold weather, with DC 15 that increments after every previous check
 5. Inside macro there are tooltips on how to modify it
