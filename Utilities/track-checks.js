@@ -1,3 +1,4 @@
+// Base DC of your check
 let currentColdDC = 15
 
 function stopSevereColdCheck() {
@@ -14,14 +15,19 @@ function savingThrow() {
    game.MonksTokenBar.requestRoll(
       tokens,
       (options = {
+         // type of roll, you can make it public, for example
          rollMode: "blindroll",
          silent: true,
+         // type of saving throw. You can change it to any other skill or saving throw
          request: "fortitude",
+         // true, if you want to resolve it after request
          fastForward: true,
+         // the DC
          dc: currentColdDC,
       })
    )
-   //
+
+   // that whole complicated stuff is designed to print in chat character's current resists against, in this case, cold. It checks every character for any NOTES in their Fortitude saving throws, if it finds notes, it parses it for notes that contain cold or weather. And then it prints these resists so you can count them when calculating the total saving throw result.
    tokens.forEach((t) => {
       const allNotes = t.actor.allNotes
       if (allNotes.length > 0) {
@@ -50,7 +56,7 @@ function savingThrow() {
                content: `${
                   resistCold.length >= 1
                      ? resistCold
-                     : "Нет сопротивления холоду."
+                     : "No cold weather/damage resist."
                }`,
                speaker: { alias: `${t.name}` },
             })
@@ -66,21 +72,22 @@ function savingThrowAndStopCheck() {
    stopSevereColdCheck()
 }
 
+// Text. You can change it as you wish!
 const checkSevereCold = game.Gametime.doEvery({ minutes: 60 }, () => {
    new Dialog({
-      title: "Холодрыга",
-      content: `Персонажи должны сделать проверку Стойкости со СЛ ${currentColdDC}`,
+      title: "It's cold!",
+      content: `Characters must make a Fortitude save with the DC of ${currentColdDC}`,
       buttons: {
          savingThrow: {
-            label: "Проверка Стойкости",
+            label: "Check Fortitude for all",
             callback: () => savingThrow(),
          },
          stopCheck: {
-            label: "Остановить проверки",
+            label: "Stop checking",
             callback: () => stopSevereColdCheck(),
          },
          savingThrowAndStopCheck: {
-            label: "Спасбросок и остановка проверок",
+            label: "Saving throw and stop checking",
             callback: () => savingThrowAndStopCheck(),
          },
       },
