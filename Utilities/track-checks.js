@@ -72,8 +72,9 @@ function savingThrowAndStopCheck() {
    stopSevereColdCheck()
 }
 
-// Text. You can change it as you wish!
+   // Right here you manage the time. I set "minutes" 60 which means every hour. I strongly suggest using minutes cause they work the best. For one day - use 1440 minutes.
 const checkSevereCold = game.Gametime.doEvery({ minutes: 60 }, () => {
+   // Text. You can change it as you wish!
    new Dialog({
       title: "It's cold!",
       content: `Characters must make a Fortitude save with the DC of ${currentColdDC}`,
